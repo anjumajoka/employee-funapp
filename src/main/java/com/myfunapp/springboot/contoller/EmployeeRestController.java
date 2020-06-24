@@ -49,4 +49,14 @@ public class EmployeeRestController {
         employeeService.deleteById(id);
 
         }
+
+        @PostMapping("/employees")
+        public Employee addNewEmployee(@RequestBody Employee emp){
+
+        emp.setId(0);
+
+        employeeService.saveEmployee(emp);
+
+        return emp;
+        }
 }

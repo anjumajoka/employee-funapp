@@ -36,4 +36,11 @@ public class EmployeeServiceImpl implements EmployeeService{
 
         employeeDAO.deleteById(id);
     }
+
+    public Employee saveEmployee(Employee employee){
+
+        employeeDAO.saveEmployee(employee);
+
+        return employee;
+    }
 }
